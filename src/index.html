@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--main css-->
+<!--    <link rel="stylesheet" href="css/style.css">-->
+    <style>
+        *,
+        *::after,
+        *::before {
+            box-sizing: inherit;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            box-sizing: border-box;
+            font-size: 62.5%;
+            font-family: Lato, sans-serif;
+        }
+
+        body {
+            color: #444444;
+            font-size: 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            background-color: green;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            background-color: cornflowerblue;
+            display: inline-block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h4 {
+            padding: 1rem 0;
+        }
+
+        form {
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        label {
+            color: white;
+        }
+
+        input {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+        }
+
+        #cta--submit:hover {
+            background-color: #64d2ed;
+            cursor: pointer;
+        }
+
+        .section-app {
+            flex-grow: 1;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            width: 120rem;
+        }
+
+        .movies {
+            flex: 0 0 60%;
+            background-color: currentColor;
+        }
+
+        .favorites {
+            flex: 0 0 40%;
+            background-color: indianred;
+            padding: 2rem 0;
+        }
+
+        .form--favorites {
+            text-align: center;
+        }
+
+        #genre {
+            padding: .5rem 1.3rem;
+            border: none;
+            border-radius: .2rem;
+        }
+
+        .movie {
+            margin: 2rem auto;
+            width: 150px;
+            /*height: 200px;*/
+            overflow: hidden;
+            /*border-radius: 100px;*/
+        }
+
+        img {
+            display: block;
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .pages-box {
+            text-align: center;
+        }
+
+        #cta--prev {
+            cursor: pointer;
+        }
+
+        #cta--next {
+
+        }
+
+        li {
+
+        }
+    </style>
+</head>
+<body>
+
+<h1>FAVORITE MOVIES</h1>
+<form>
+    <label for="search">Search: </label>
+    <input type="text" id="search" placeholder="Search for recipe">
+
+    <input type="submit" id="cta--submit" name="ctaSubmit">
+</form>
+
+<section class="section-app">
+
+    <div class="movies">
+        <h2>FILMS LIST</h2>
+
+        <ul class="movies-list">
+            <!--&lt;!&ndash;            <li class="movie">&ndash;&gt;-->
+            <!--&lt;!&ndash;                <a href="javascript:" class="movie__link">&ndash;&gt;-->
+            <!--&lt;!&ndash;                    <h3 class="movie__title">MOVIE TITLE</h3>&ndash;&gt;-->
+            <!--&lt;!&ndash;                    <img src="" alt="movie__poster">&ndash;&gt;-->
+            <!--&lt;!&ndash;                </a>&ndash;&gt;-->
+            <!--&lt;!&ndash;            </li>&ndash;&gt;-->
+        </ul>
+
+        <div class="pages-box" data-page="0">
+            <button id="cta--prev" data-goto="1" data-action="prev">
+                << PREV
+            </button>
+
+            <button id="cta--next" data-goto="2" data-action="next">
+                NEXT >>
+            </button>
+        </div>
+    </div>
+    <div class="favorites">
+        <h2>FAVORITES</h2>
+        <form class="form--favorites">
+            <label>
+                Genre:
+                <select name="genre" id="genre">
+                    <option value="comedy">Comedy</option>
+                    <option value="action">Action</option>
+                    <option value="drama">Drama</option>
+                    <option value="thriller">Thriller</option>
+                </select>
+            </label>
+        </form>
+    </div>
+</section>
+
+</body>
+</html>
